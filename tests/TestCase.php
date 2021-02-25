@@ -2,8 +2,8 @@
 
 namespace Kapouet\Klaro\Tests;
 
-use Kapouet\Klaro\KlaroServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Kapouet\Klaro\KlaroServiceProvider;
 
 class TestCase extends Orchestra
 {
