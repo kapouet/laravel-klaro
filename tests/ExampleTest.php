@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Kapouet\Klaro\Tests;
 
 class ExampleTest extends TestCase
 {

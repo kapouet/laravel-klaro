@@ -1,36 +1,3 @@
-![Laravel Noty](docs/banner.png)
-
-Add [Klaro](https://kiprotect.com/klaro) cookie consent in your Laravel app
-
-## Compatibility
-
-| Laravel | PHP | Package |
-| --- | --- | --- |
-| ^8.0 | ^7.4 | ^1.0 | 
-
-## Installation
-
-You can install the package via composer:
-
-```bash
-composer require kapouet/laravel-klaro
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --provider="Kapouet\Klaro\KlaroServiceProvider" --tag="laravel-klaro-config"
-```
-
-You can publish the lang files with:
-
-```bash
-php artisan vendor:publish --provider="Kapouet\Klaro\KlaroServiceProvider" --tag="laravel-klaro-translations"
-```
-
-This is the contents of the published config file:
-
-```php
 <?php
 
 /**
@@ -124,74 +91,14 @@ return [
     /**
      * Here you specify the third-party services that Klaro will manage for you.
      */
-    'services' => [],
-];
-```
-
-## Usage
-
-### Load style and scripts
-
-```html
-<!-- Add style in head tag -->
-<x-klaro::style/>
-
-<!-- Add scripts before body closing tag -->
-<x-klaro::script/>
-<x-klaro::script name="matomo" src="https://analytics.7scientists.com/matomo.js"/>
-<x-klaro::script name="matomo">
-    console.log('Inline script');
-</x-klaro::script>
-```
-
-### Add services in your config
-
-See `services` in https://kiprotect.com/docs/klaro/annotated-configuration to create service in your config file, dont
-add translations in config file.
-
-### Add translations
-
-```php
-return [
-    'privacyPolicyUrl' => '/privacy',
-    'purposes' => [
-        'analytics' => [
-            'title' => 'Analytics',
-            'description' => 'Web analytics',
-        ],
-    ],
     'services' => [
-        'matomo' => [
-            'title' => 'Matomo/Piwik',
-            'description' => 'Matomo is a simple, self-hosted analytics service.',
+        [
+            'name' => 'service_name',
+            'purposes' => ['purpose_name'],
+        ],
+        [
+            'name' => 'toto',
+            'purposes' => ['purpose_name'],
         ],
     ],
 ];
-```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [Quentin CATHERINE](https://github.com/balsakup)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
