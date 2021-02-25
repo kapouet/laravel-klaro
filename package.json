@@ -1,0 +1,23 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/plugin-syntax-jsx": "^7.12.13",
+        "@babel/preset-react": "^7.12.13",
+        "babel-preset-preact": "^2.0.0",
+        "klaro": "^0.7.14",
+        "laravel-mix": "^6.0.13",
+        "postcss": "^8.1",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.32.8",
+        "sass-loader": "^11.0.1"
+    }
+}

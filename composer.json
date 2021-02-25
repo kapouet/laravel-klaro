@@ -1,21 +1,21 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "kapouet/laravel-klaro",
+    "description": "laravel-klaro",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "kapouet",
+        "laravel-klaro"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/kapouet/laravel-klaro",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Quentin CATHERINE",
+            "email": "balsakup+kapouet@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^7.4|^8.0",
         "spatie/laravel-package-tools": "^1.1",
         "illuminate/contracts": "^8.0"
     },
@@ -27,13 +27,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
-        }
+            "Kapouet\\Klaro\\": "src",
+            "Kapouet\\Klaro\\Database\\Factories\\": "database/factories"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Kapouet\\Klaro\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Kapouet\\Klaro\\KlaroServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Klaro": "Kapouet\\Klaro\\KlaroFacade"
             }
         }
     },
